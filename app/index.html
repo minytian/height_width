@@ -9,10 +9,6 @@
   <link rel="icon" href="img/favicon.png" />
   <meta property="og:image" content="img/dest/preview.jpg" />
   <link rel="stylesheet" href="css/app.min.css" />
-
-  <!-- bootstrap  delete!!!!!!!!! #################################-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
@@ -20,14 +16,18 @@
     <div class="container">
       <div class="row wrap">
         <div class="col-md-6 calculate__block">
-          <div class="calculate__form">
-            <form action="">
-              <input type="text" class="calculate__width form-control" placeholder="Width" />
-              <input type="text" class="calculate__height form-control" placeholder="Height" />
-              <input type="button" class="calculate__button btn btn-primary" value="Result" />
-              <div class="calculate__result"></div>
-            </form>
-          </div>
+          <form>
+            <div class="form-row">
+              <div class="col-6">
+                <input type="text" class="form-control calculate__width" placeholder="Width">
+              </div>
+              <div class="col-6">
+                <input type="text" class="form-control calculate__height" placeholder="Height">
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary calculate__button">Result</button>
+            <div class="calculate__result"></div>
+          </form>
         </div>
       </div>
     </div>
