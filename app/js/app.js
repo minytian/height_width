@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    // если Enter или левая кнопка мыши
     if (event.key === "Enter" || event.which == 1) {
       console.log(event)
 
@@ -50,16 +51,4 @@ document.addEventListener("DOMContentLoaded", function () {
 // Добавить событие по клику на enter
 // После ответа на событие очищать поля ввода
 // И забывать результат, когда заново кликаешь, чтобы выдавал новый
-
-
-
-// Не сделано
 // Разрешить кнопкам лево право таб бэкспасе делет работать. код ниже
-
-// if (event.key === "Enter" || event.which == 1) {
-    // Разрешаем: backspace, delete, tab
-    // if ((event.keyCode < 46 || event.keyCode == 8 || event.keyCode == 9) ||
-    //   // Разрешаем: home, end, влево, вправо
-    //   (event.keyCode >= 35 && event.keyCode <= 39)) {
-    //   return
-    // }
