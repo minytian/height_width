@@ -45,6 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Формула от Миши
+
+// const formula = Math.sqrt(Number(heightValue) / (Number(900)));
+//
+
 // Сделано !
 // создать две функции клткхендлер на клик и кейап
 // Сделать проверку на буквы и прочее непотребство
