@@ -23,21 +23,26 @@ document.addEventListener("DOMContentLoaded", function () {
     // если Enter или левая кнопка мыши
     if (event.key === "Enter" || event.which == 1) {
 
-      let widthValue = width.value;
-      let heightValue = height.value;
-      if (widthValue === "" || heightValue === "") {
+      // Если поламаются value, вернуть переменные и заменить в формулах.
+      // let widthValue = width.value;
+      // let heightValue = height.value;
+
+      // Проверка на пустые поля.
+      if ((width.value === "" || height.value === "") || (width.value == 0 || height.value == 0)) {
         result.innerHTML = `Пожалуйста, заполните поля для расчёта.`;
+        width.value = "";
+        height.value = "";
         return
       }
 
-      let formula = Math.sqrt(Number(heightValue) / (Number(widthValue) / 1.7));
+      let formula = Math.sqrt(Number(height.value) / (Number(width.value) / 1.7));
       // Условие не верное. Оно срабатывает всегда.
       // if (5.2 >= formula <= 5.8) {
       //    formula *= 1.1;
       // }
         
 
-      const answer = Number(heightValue) / formula;
+      const answer = Number(height.value) / formula;
       result.innerHTML = `Поделить на ${formula.toFixed(1)} частей по ${answer.toFixed(2)}px`;
 
       width.value = "";
