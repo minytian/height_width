@@ -22,12 +22,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // если Enter или левая кнопка мыши
     if (event.key === "Enter" || event.which == 1) {
-      console.log(event)
 
       let widthValue = width.value;
       let heightValue = height.value;
+      if (widthValue === "" || heightValue === "") {
+        result.innerHTML = `Пожалуйста, заполните поля для расчёта.`;
+        return
+      }
 
-      const formula = Math.sqrt(Number(heightValue) / (Number(widthValue) / 1.7));
+      let formula = Math.sqrt(Number(heightValue) / (Number(widthValue) / 1.7));
+      // Условие не верное. Оно срабатывает всегда.
+      // if (5.2 >= formula <= 5.8) {
+      //    formula *= 1.1;
+      // }
+        
 
       const answer = Number(heightValue) / formula;
       result.innerHTML = `Поделить на ${formula.toFixed(1)} частей по ${answer.toFixed(2)}px`;
